@@ -24,12 +24,26 @@ const GlobalThemeStyles = createGlobalStyle(({ theme }) => css`
   html {
     font-size: ${theme.fonts.size.root} !important; /* override Bootstrap default */
   }
+  
+  input, .form-inline .form-control {
+    border-radius: 0 !important;
+  }
 
   body {
     background-color: ${theme.colors.global.background};
-    color: ${theme.colors.global.textDefault};
-    font-family: ${theme.fonts.family.body};
+    color: #5B6A83;
+    // font-family: ${theme.fonts.family.body};
+    font-family: "Source Sans Pro";
+    font-size: 16px;
     height: 100vh;
+  }
+  
+  h1 {
+    font-size: 28px !important;
+    font-family: "Barlow Condensed";
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    color: #3E434C !important;
   }
 
   #app-root {

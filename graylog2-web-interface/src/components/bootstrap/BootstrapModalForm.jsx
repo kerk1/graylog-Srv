@@ -137,7 +137,7 @@ class BootstrapModalForm extends React.Component {
           </Modal.Body>
           <Modal.Footer>
             <Button type="button" onClick={this.onModalCancel}>{cancelButtonText}</Button>
-            <Button type="submit" disabled={submitButtonDisabled} bsStyle="primary">{submitButtonText}</Button>
+            <Button type="submit" disabled={submitButtonDisabled} bsStyle="success">{submitButtonText}</Button>
           </Modal.Footer>
         </form>
       </BootstrapModalWrapper>

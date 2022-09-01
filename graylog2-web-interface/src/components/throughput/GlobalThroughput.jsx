@@ -29,7 +29,6 @@ const ThroughputNavItem = styled(NavItem)`
     padding-bottom: 10px !important;
     display: flex !important;
     align-items: center;
-    height: 50px;
 
     @media (max-width: 991px) {
       height: auto;

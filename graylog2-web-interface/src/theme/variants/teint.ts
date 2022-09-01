@@ -35,11 +35,11 @@ const brand: $PropertyType<Colors, 'brand'> = {
 };
 
 const globalDefault: $PropertyType<Colors, 'global'> = {
-  background: '#e8e8e8',
+  background: '#EDEFF2',
   contentBackground: '#fff',
-  link: '#702785',
+  link: '#578DCC',
   textAlt: '',
-  textDefault: '',
+  textDefault: '#5B6A83',
   linkHover: '',
   navigationBackground: '',
   navigationBoxShadow: '',

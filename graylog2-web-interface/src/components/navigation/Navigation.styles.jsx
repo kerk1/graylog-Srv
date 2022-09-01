@@ -27,6 +27,43 @@ const StyledNavbar = styled(Navbar)(({ theme }) => css`
   .dev-badge-wrap .dev-badge {
     margin: 0 10px;
   }
+  
+  .navbar-nav:not(.navbar-right) {
+    font-family: "Barlow Condensed";
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    flex: 1;
+  }
+  
+    
+  .navbar-nav.navbar-right > li > a {
+    color: #1f1f1f !important;
+  }
+  
+  .navbar-nav > li > a {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    color: rgba(108, 117, 133);
+    font-weight: bold;
+  }
+   
+  .navbar-nav > .active > a {
+    background: white;
+    color: #3E434C;
+  }
+  
+  .navbar-collapse {
+    display: flex !important;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+  }
+  
+  .container-fluid { 
+    min-height: 48px;
+  }
+  
 
   @media (max-width: 991px) {
     .small-scrn-badge {
@@ -116,7 +153,7 @@ const StyledNavbar = styled(Navbar)(({ theme }) => css`
 
       #scratchpad-toggle,
       .dropdown-toggle {
-        padding: 15px 12px !important;
+        padding: 0 12px !important;
       }
     }
 
@@ -130,7 +167,6 @@ const StyledNavbar = styled(Navbar)(({ theme }) => css`
       box-shadow: none;
 
       &.collapse {
-        display: block !important;
         height: auto !important;
         padding-bottom: 0;
         overflow: visible !important;

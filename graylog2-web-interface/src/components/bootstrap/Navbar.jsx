@@ -27,9 +27,16 @@ const Navbar = styled(BootstrapNavbar)(({ theme }) => css`
   box-shadow: 0 3px 3px ${theme.colors.global.navigationBoxShadow};
   margin-bottom: 0;
 
+  .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+
   .navbar-brand {
     color: ${theme.colors.variant.default};
-    padding: 12px 15px 0 15px;
+    padding: 0 15px 0 15px;
+    margin-top: 3px;
+    height: auto;
 
     &:hover,
     &:focus {

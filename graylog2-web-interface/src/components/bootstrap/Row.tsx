@@ -28,6 +28,7 @@ export const RowContentStyles = css(({ theme }) => css`
 const Row = styled(BootstrapRow)`
   &.content {
     ${RowContentStyles}
+    padding-top: 0;
   }
 `;
 

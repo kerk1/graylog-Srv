@@ -39,7 +39,7 @@ const StreamListItem = styled.li(({ theme }) => css`
   padding: 15px 0;
 
   &:not(:last-child) {
-    border-bottom: 1px solid ${theme.colors.variant.light.info};
+    border-bottom: 1px solid ${theme.colors.gray[90]};
   }
 
   .stream-data {
@@ -67,8 +67,6 @@ const StreamListItem = styled.li(({ theme }) => css`
   }
 
   .stream-description {
-    margin-bottom: 3px;
-
     .fa-cube {
       margin-right: 5px;
     }
@@ -254,11 +252,10 @@ class Stream extends React.Component {
     return (
       <StreamListItem>
         <div className="stream-actions pull-right">
+          {toggleStreamLink}{' '}
           {editRulesLink}{' '}
           {manageAlertsLink}{' '}
           <ShareButton entityId={stream.id} entityType="stream" onClick={this._openEntityShareModal} />
-          {toggleStreamLink}{' '}
-
           {streamControls}
         </div>
 

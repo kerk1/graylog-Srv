@@ -47,6 +47,7 @@ class CreateStreamButton extends React.Component {
     return (
       <span>
         <Button bsSize={bsSize}
+                style={{ textTransform: 'uppercase' }}
                 bsStyle={bsStyle}
                 className={className}
                 onClick={this.onClick}>

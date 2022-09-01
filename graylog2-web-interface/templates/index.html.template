@@ -8,6 +8,16 @@
     <script defer src="/<%= vendorModule().files.js[vendorChunk] %>"></script>
     <% } %>
     <%= htmlWebpackPlugin.tags.headTags %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas%20Neue">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow%20Condensed:wght@200;300;400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source%20Sans%20Pro:wght@200;300;400;500;600;700&display=swap">
   </head>
   <body>
     <%= htmlWebpackPlugin.tags.bodyTags %>

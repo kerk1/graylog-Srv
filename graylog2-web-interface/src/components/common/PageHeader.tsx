@@ -52,6 +52,27 @@ const LIFECYCLE_DEFAULT_MESSAGES = {
   legacy: 'This feature has been discontinued and will be removed in a future Graylog version.',
 };
 
+const Container = styled.div`
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+    
+  .description {
+    color: #5B6A83;
+    margin-top: 5px;
+  }
+`;
+
+const LeftCol = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+const RightCol = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 type Props = {
   title: React.ReactNode,
   children: React.ReactElement | Array<React.ReactElement>,
@@ -122,6 +143,41 @@ class PageHeader extends React.Component<Props> {
     const children = (childList !== undefined && 'length' in childList ? childList : [childList]);
 
     const topLevelClassNames = subpage ? '' : 'content';
+
+    return (
+      <Container>
+        <LeftCol>
+          <div>
+            <H1>
+              {title} <small>{this.renderLifecycleIndicator()}</small>
+            </H1>
+          </div>
+          <div>
+            {children[0] && (
+              <p className="description">
+                {children[0]}
+              </p>
+            )}
+          </div>
+        </LeftCol>
+        <RightCol>
+          <div style={{ marginBottom: '4px' }}>
+            {children[1] && (
+              <SupportLink>
+                {children[1]}
+              </SupportLink>
+            )}
+          </div>
+          <div>
+            {subactions && (
+              <div className="pull-right visible-lg visible-md">
+                {subactions}
+              </div>
+            )}
+          </div>
+        </RightCol>
+      </Container>
+    );
 
     return (
       <div>

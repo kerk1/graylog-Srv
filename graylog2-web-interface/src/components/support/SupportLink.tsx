@@ -28,7 +28,8 @@ type Props = {
 const IconStack = styled.div<{ small: boolean }>(({ small, theme }) => css`
   position: relative;
   min-width: 2.5em;
-  font-size: ${small ? theme.fonts.size.body : theme.fonts.size.large};
+  // font-size: ${small ? theme.fonts.size.body : theme.fonts.size.large};
+  font-size: 13px;
   
   .fa-stack-1x {
     color: ${theme.colors.global.textAlt};
@@ -39,21 +40,21 @@ const IconStack = styled.div<{ small: boolean }>(({ small, theme }) => css`
   }
 `);
 
-const SupportLink = ({ small, children }: Props) => {
+const SupportLink = ({ small = true, children }: Props) => {
   return (
-    <table className="description-tooltips" style={{ marginBottom: '10px', display: 'inline' }}>
+    <table className="description-tooltips" style={{ marginBottom: '6px', display: 'inline' }}>
       <tbody>
         <tr>
-          <td style={{ width: '40px' }}>
-            <IconStack className={`fa-stack ${small ? '' : 'fa-lg'}`} small={small}>
-              <Icon name="circle" className="fa-stack-2x" />
-              <Icon name="lightbulb" className="fa-stack-1x" inverse />
-            </IconStack>
-          </td>
           <td>
             <strong>
               {children}
             </strong>
+          </td>
+          <td>
+            <IconStack className="fa-stack" small={small}>
+              <Icon name="circle" className="fa-stack-2x" />
+              <Icon name="lightbulb" className="fa-stack-1x" inverse />
+            </IconStack>
           </td>
         </tr>
       </tbody>

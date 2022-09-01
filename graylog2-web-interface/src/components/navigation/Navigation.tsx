@@ -150,7 +150,7 @@ const Navigation = React.memo(({ pathname }: Props) => {
           </LinkContainer>
 
           <LinkContainer to={Routes.STREAMS}>
-            <NavItem>Streams</NavItem>
+            <NavItem className="active">Streams</NavItem>
           </LinkContainer>
 
           <LinkContainer to={Routes.ALERTS.LIST}>
@@ -166,9 +166,8 @@ const Navigation = React.memo(({ pathname }: Props) => {
           <SystemMenu />
         </Nav>
 
-        <NotificationBadge />
-
         <Nav navbar pullRight className="header-meta-nav">
+          {/* <NotificationBadge /> */}
           {AppConfig.isCloud() ? (
             <GlobalThroughput disabled />
           ) : (

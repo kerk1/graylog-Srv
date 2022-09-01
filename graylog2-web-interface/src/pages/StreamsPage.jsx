@@ -62,22 +62,22 @@ const StreamsPage = createReactClass({
     return (
       <DocumentTitle title="Streams">
         <div>
-          <PageHeader title="Streams">
+          <PageHeader title="Streams"
+                      subactions={(
+                        <IfPermitted permissions="streams:create">
+                          <CreateStreamButton bsStyle="success"
+                                              onSave={this._onSave}
+                                              indexSets={this.state.indexSets} />
+                        </IfPermitted>
+)}>
             <span>
               You can route incoming messages into streams by applying rules against them. Messages matching
               the rules of a stream are routed into it. A message can also be routed into multiple streams.
             </span>
 
             <span>
-              Read more about streams in the <DocumentationLink page={DocsHelper.PAGES.STREAMS} text="documentation" />.
+              <DocumentationLink page={DocsHelper.PAGES.STREAMS} text="Streams documentation" />.
             </span>
-
-            <IfPermitted permissions="streams:create">
-              <CreateStreamButton bsSize="large"
-                                  bsStyle="success"
-                                  onSave={this._onSave}
-                                  indexSets={this.state.indexSets} />
-            </IfPermitted>
           </PageHeader>
 
           <Row className="content">

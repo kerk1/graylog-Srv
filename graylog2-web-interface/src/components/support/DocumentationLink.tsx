@@ -16,6 +16,7 @@
  */
 import * as React from 'react';
 import type { ReactNode } from 'react';
+import styled from 'styled-components';
 
 import DocsHelper from 'util/DocsHelper';
 
@@ -25,11 +26,18 @@ type Props = {
   title?: string;
 }
 
+const Link = styled.a`
+  white-space: nowrap;
+  font-size: 14px;
+  color: inherit;
+  font-weight: 300;
+`;
+
 const DocumentationLink = ({ page, title = '', text }: Props) => {
   return (
-    <a href={DocsHelper.toString(page)} title={title} target="_blank" rel="noreferrer">
+    <Link href={DocsHelper.toString(page)} title={title} target="_blank" rel="noreferrer">
       {text}
-    </a>
+    </Link>
   );
 };
 
